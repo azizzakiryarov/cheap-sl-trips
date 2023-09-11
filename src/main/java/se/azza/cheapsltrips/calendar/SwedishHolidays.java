@@ -11,19 +11,19 @@ import static java.util.stream.Collectors.toList;
 @Getter
 public enum SwedishHolidays {
 
-    NYARSDAGEN(LocalDate.of(2023, 1, 1), "Nyårsdagen"),
-    TRETTONDEDAG(LocalDate.of(2023, 1, 6), "Trettondedag"),
-    LANGFREDAG(LocalDate.of(2023, 4, 7), "Långfredagen"),
-    PASKDAGEN(LocalDate.of(2023, 4, 9), "Påskdagen"),
-    ANNANDAGPASK(LocalDate.of(2023, 4, 10), "Annandag påsk"),
-    FORSTAMAJ(LocalDate.of(2023, 5, 1), "Första maj"),
-    KRISTIHIMMELFARDSDAG(LocalDate.of(2023, 5, 18), "Kristi himmelsfärdsdag"),
-    PINGSTDAGEN(LocalDate.of(2023, 5, 28), "Pingstdagen"),
-    NATIONALDAGEN(LocalDate.of(2023, 6, 6), "Nationaldagen"),
-    MIDSOMMARAFTON(LocalDate.of(2023, 6, 24), "Midsommardagen"),
-    ALLAHELGONSDAG(LocalDate.of(2023, 11, 4), "Alla helgons dag"),
-    JULDAGEN(LocalDate.of(2023, 12, 25), "Jul dagen"),
-    ANNANDAGJUL(LocalDate.of(2023, 12, 26), "Annan dag jul");
+    NYARSDAGEN(LocalDate.of(LocalDate.now().getYear(), 1, 1), "Nyårsdagen"),
+    TRETTONDEDAG(LocalDate.of(LocalDate.now().getYear(), 1, 6), "Trettondedag"),
+    LANGFREDAG(LocalDate.of(LocalDate.now().getYear(), 4, 7), "Långfredagen"),
+    PASKDAGEN(LocalDate.of(LocalDate.now().getYear(), 4, 9), "Påskdagen"),
+    ANNANDAGPASK(LocalDate.of(LocalDate.now().getYear(), 4, 10), "Annandag påsk"),
+    FORSTAMAJ(LocalDate.of(LocalDate.now().getYear(), 5, 1), "Första maj"),
+    KRISTIHIMMELFARDSDAG(LocalDate.of(LocalDate.now().getYear(), 5, 18), "Kristi himmelsfärdsdag"),
+    PINGSTDAGEN(LocalDate.of(LocalDate.now().getYear(), 5, 28), "Pingstdagen"),
+    NATIONALDAGEN(LocalDate.of(LocalDate.now().getYear(), 6, 6), "Nationaldagen"),
+    MIDSOMMARAFTON(LocalDate.of(LocalDate.now().getYear(), 6, 24), "Midsommardagen"),
+    ALLAHELGONSDAG(LocalDate.of(LocalDate.now().getYear(), 11, 4), "Alla helgons dag"),
+    JULDAGEN(LocalDate.of(LocalDate.now().getYear(), 12, 25), "Jul dagen"),
+    ANNANDAGJUL(LocalDate.of(LocalDate.now().getYear(), 12, 26), "Annan dag jul");
 
     private final LocalDate holiday;
     private final String nameOfHoliday;

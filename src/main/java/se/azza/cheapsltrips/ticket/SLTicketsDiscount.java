@@ -23,4 +23,13 @@ public enum SLTicketsDiscount {
         this.name = name;
         this.price = price;
     }
+
+    public static SLTicketsDiscount valueOfSLTicketsDiscount(String name) {
+        for (SLTicketsDiscount typ : values()) {
+            if (typ.getName().equals(name)) {
+                return typ;
+            }
+        }
+        throw new IllegalArgumentException("No matching SLTicketsDiscount found for name=" + name);
+    }
 }

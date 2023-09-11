@@ -3,7 +3,7 @@ package se.azza.cheapsltrips.ticket;
 import lombok.Getter;
 
 @Getter
-public enum ULTicketsDiscount {
+public enum ULTicketsAdditionalDiscount {
 
     RESTILLFRANUPPSALA("Resa till/från Uppsala (Zon 1,2,5)", 60),
     TILLAGTILLSLRABATTERADTILLFRANUPPSALA("Billjet gäller för resa i zon 1, 2 och 5 i Uppsala län. Lägg till SL-billjet, rabatterad", 20),
@@ -14,7 +14,7 @@ public enum ULTicketsDiscount {
     private final String name;
     private final int price;
 
-    ULTicketsDiscount(String name, int price) {
+    ULTicketsAdditionalDiscount(String name, int price) {
         this.name = name;
         this.price = price;
     }

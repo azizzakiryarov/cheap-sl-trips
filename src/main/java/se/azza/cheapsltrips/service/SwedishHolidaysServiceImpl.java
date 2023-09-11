@@ -1,12 +1,17 @@
 package se.azza.cheapsltrips.service;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 import static java.util.stream.Collectors.toList;
+import static se.azza.cheapsltrips.calendar.SwedishHolidays.getListOfSwedishHolidays;
 
+@Service
 public class SwedishHolidaysServiceImpl implements SwedishHolidaysService {
 
     @Override
@@ -23,5 +28,9 @@ public class SwedishHolidaysServiceImpl implements SwedishHolidaysService {
         return startDate.datesUntil(endDate.plusDays(1))
                 .filter(isWeekend.or(isHoliday).negate())
                 .collect(toList());
+    }
+
+    public ResponseEntity<?> countBusinessDaysBetweenStartDateAndEndDate(LocalDate startDate, LocalDate endDate) {
+        return ResponseEntity.ok(countBusinessDaysBetween(startDate, endDate, Optional.of(getListOfSwedishHolidays())).size());
     }
 }
