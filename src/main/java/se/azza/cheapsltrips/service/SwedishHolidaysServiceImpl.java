@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
-import static java.util.stream.Collectors.toList;
+
 import static se.azza.cheapsltrips.calendar.SwedishHolidays.getListOfSwedishHolidays;
 
 @Service
@@ -27,10 +27,10 @@ public class SwedishHolidaysServiceImpl implements SwedishHolidaysService {
         Predicate<LocalDate> isWeekend = date -> date.getDayOfWeek() == DayOfWeek.SATURDAY || date.getDayOfWeek() == DayOfWeek.SUNDAY;
         return startDate.datesUntil(endDate.plusDays(1))
                 .filter(isWeekend.or(isHoliday).negate())
-                .collect(toList());
+                .toList();
     }
 
-    public ResponseEntity<?> countBusinessDaysBetweenStartDateAndEndDate(LocalDate startDate, LocalDate endDate) {
+    public ResponseEntity<Integer> countBusinessDaysBetweenStartDateAndEndDate(LocalDate startDate, LocalDate endDate) {
         return ResponseEntity.ok(countBusinessDaysBetween(startDate, endDate, Optional.of(getListOfSwedishHolidays())).size());
     }
 }
