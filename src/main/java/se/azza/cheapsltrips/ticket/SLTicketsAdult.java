@@ -5,16 +5,16 @@ import lombok.Getter;
 @Getter
 public enum SLTicketsAdult {
 
-    ENKELBILLJET("Enkelbilljet", 39),
-    TJUGOFYRATIMMARSBILLJET("24-timmarsbilljet", 165),
-    SJUTTIOTVATIMMARSBILLJET("72-timmarsbilljet", 330),
-    SJUDAGARSBILLJET("7-dagarsbilljet", 430),
-    TRETTIODAGARSBILLJET("30-dagarsbilljet", 970),
-    NITTIODAGARSBILLJET("90-dagarsbilljet", 2810),
-    ARSBILLJET("Årsbilljet", 10190),
+    ENKELBILLJET("Enkelbilljet", 43),
+    TJUGOFYRATIMMARSBILLJET("24-timmarsbilljet", 180),
+    SJUTTIOTVATIMMARSBILLJET("72-timmarsbilljet", 360),
+    SJUDAGARSBILLJET("7-dagarsbilljet", 470),
+    TRETTIODAGARSBILLJET("30-dagarsbilljet", 1060),
+    NITTIODAGARSBILLJET("90-dagarsbilljet", 3070),
+    ARSBILLJET("Årsbilljet", 11130),
 
-    PENDELTAGTILLFRANARLANDAC("Pendeltåg till/från Arlanda C", 132),
-    TILLAGTILLSLVUXEN("Lägg till SL-billjet, vuxen", 39);
+    PENDELTAGTILLFRANARLANDAC("Pendeltåg till/från Arlanda C", 147),
+    TILLAGTILLSLVUXEN("Lägg till SL-billjet, vuxen", 43);
 
     private final String name;
     private final int price;
